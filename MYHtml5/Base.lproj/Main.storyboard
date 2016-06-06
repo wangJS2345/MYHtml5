@@ -65,22 +65,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AhI-kg-Vgf">
-                                <rect key="frame" x="200" y="74" width="200" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RVS-fc-XDQ">
+                                <rect key="frame" x="20" y="475" width="560" height="36"/>
+                                <color key="backgroundColor" red="1" green="0.56436396570000003" blue="0.64894807470000004" alpha="0.95422952589999999" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="Qjk-nD-PVr"/>
-                                    <constraint firstAttribute="height" constant="30" id="bkI-Fz-i8V"/>
+                                    <constraint firstAttribute="height" constant="36" id="jKg-JV-eus"/>
                                 </constraints>
-                                <segments>
-                                    <segment title="左"/>
-                                    <segment title="右"/>
-                                </segments>
-                            </segmentedControl>
+                                <state key="normal" title="刷新">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="refreshClick:" destination="xSi-fu-6uc" eventType="touchUpInside" id="sKw-hJ-1qM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AhI-kg-Vgf" firstAttribute="centerX" secondItem="0qF-Ia-wN1" secondAttribute="centerX" id="70u-ni-IYT"/>
-                            <constraint firstItem="AhI-kg-Vgf" firstAttribute="top" secondItem="IMk-Wu-gUn" secondAttribute="bottom" constant="10" id="Qvf-7S-nh8"/>
+                            <constraint firstItem="3fN-xk-8CA" firstAttribute="top" secondItem="RVS-fc-XDQ" secondAttribute="bottom" constant="40" id="5FR-kh-kBB"/>
+                            <constraint firstAttribute="trailing" secondItem="RVS-fc-XDQ" secondAttribute="trailing" constant="20" id="REa-yi-JLl"/>
+                            <constraint firstItem="RVS-fc-XDQ" firstAttribute="leading" secondItem="0qF-Ia-wN1" secondAttribute="leading" constant="20" id="gIl-Ra-7Ky"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="Nn6-Qe-dRB"/>
