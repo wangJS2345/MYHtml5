@@ -17,6 +17,39 @@
             alert("failFunction");
         }
         </script>
+        <script type="text/javascript" charset="utf-8">
+             
+            var destinationType;
+             
+            document.addEventListener("deviceready",onDeviceReady,false);
+             
+            //Cordova加载完成会触发
+            function onDeviceReady() {
+                destinationType=navigator.camera.DestinationType;
+            }
+         
+            //拍照并编辑
+            function capturePhotoEdit() {
+                //拍照并获取Base64编码的图像（quality : 存储图像的质量，范围是[0,100]）
+                //allowEdit: true 拍照完毕后允许简单编辑
+                navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 20,
+                                            allowEdit: true,
+                                            destinationType: destinationType.DATA_URL });
+            }
+         
+            //拍照成功
+            function onPhotoDataSuccess(imageData) {
+                console.log(imageData);
+                var smallImage = document.getElementById('smallImage');
+                smallImage.style.display = 'block';
+                smallImage.src = "data:image/jpeg;base64," + imageData;
+            }
+ 
+            //拍照失败
+            function onFail(message) {
+                alert('拍照失败: ' + message);
+            }
+        </script>
     </head>
     <body>
         <p>ExampleObject</p>
@@ -29,5 +62,7 @@
         <button onclick="callSomebody()">拨打电话15544445555</button>
         <br/>
                 <img style="display:none;width:240px;height:320px;" id="smallImage" src="" />
+                <br />
+                <button onclick="checkUpdate()">检查更新</button>
     </body>
 </html>

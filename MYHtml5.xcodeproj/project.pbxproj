@@ -18,6 +18,7 @@
 		E2F7866F1D0160C10075D9E0 /* MYHtml5.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E2F7866D1D0160C10075D9E0 /* MYHtml5.xcdatamodeld */; };
 		E2F786711D0160C10075D9E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2F786701D0160C10075D9E0 /* Assets.xcassets */; };
 		E2F786741D0160C10075D9E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2F786721D0160C10075D9E0 /* LaunchScreen.storyboard */; };
+		E2F93AB51D050DD600CF631B /* plugins in Resources */ = {isa = PBXBuildFile; fileRef = E2F93AB41D050DD600CF631B /* plugins */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		E2F786701D0160C10075D9E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E2F786731D0160C10075D9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2F786751D0160C10075D9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2F93AB41D050DD600CF631B /* plugins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = plugins; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		E2F786551D0160C10075D9E0 = {
 			isa = PBXGroup;
 			children = (
+				E2F93AB41D050DD600CF631B /* plugins */,
 				E2F04ABE1D018349009228D8 /* www */,
 				E2F04ABC1D018334009228D8 /* config.xml */,
 				E2F04AB61D018325009228D8 /* CordovaLib.xcodeproj */,
@@ -200,6 +203,7 @@
 				E2F786741D0160C10075D9E0 /* LaunchScreen.storyboard in Resources */,
 				E2F786711D0160C10075D9E0 /* Assets.xcassets in Resources */,
 				E2F7866C1D0160C10075D9E0 /* Main.storyboard in Resources */,
+				E2F93AB51D050DD600CF631B /* plugins in Resources */,
 				E2F04ABF1D018349009228D8 /* www in Resources */,
 				E2F04ABD1D018334009228D8 /* config.xml in Resources */,
 			);
