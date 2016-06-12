@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E231FF031D0D04BF009A37D6 /* PrintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E231FF021D0D04BF009A37D6 /* PrintViewController.m */; };
 		E2F04ABD1D018334009228D8 /* config.xml in Resources */ = {isa = PBXBuildFile; fileRef = E2F04ABC1D018334009228D8 /* config.xml */; };
 		E2F04ABF1D018349009228D8 /* www in Resources */ = {isa = PBXBuildFile; fileRef = E2F04ABE1D018349009228D8 /* www */; };
 		E2F04AC21D01835B009228D8 /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E2F04ABB1D018325009228D8 /* libCordova.a */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E231FF011D0D04BF009A37D6 /* PrintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrintViewController.h; sourceTree = "<group>"; };
+		E231FF021D0D04BF009A37D6 /* PrintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrintViewController.m; sourceTree = "<group>"; };
 		E2F04AB61D018325009228D8 /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CordovaLib.xcodeproj; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		E2F04ABC1D018334009228D8 /* config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = config.xml; path = MYHtml5/config.xml; sourceTree = "<group>"; };
 		E2F04ABE1D018349009228D8 /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				E2F786681D0160C10075D9E0 /* ViewController.m */,
 				E2F04AC31D018411009228D8 /* EOPlugin.h */,
 				E2F04AC41D018411009228D8 /* EOPlugin.m */,
+				E231FF011D0D04BF009A37D6 /* PrintViewController.h */,
+				E231FF021D0D04BF009A37D6 /* PrintViewController.m */,
 				E2F7866A1D0160C10075D9E0 /* Main.storyboard */,
 				E2F786701D0160C10075D9E0 /* Assets.xcassets */,
 				E2F786721D0160C10075D9E0 /* LaunchScreen.storyboard */,
@@ -234,6 +239,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E231FF031D0D04BF009A37D6 /* PrintViewController.m in Sources */,
 				E2F7866F1D0160C10075D9E0 /* MYHtml5.xcdatamodeld in Sources */,
 				E2F786691D0160C10075D9E0 /* ViewController.m in Sources */,
 				E2F786661D0160C10075D9E0 /* AppDelegate.m in Sources */,
@@ -360,6 +366,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MYHtml5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -367,8 +375,9 @@
 					"-all_load",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joyce.MYHtml5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmts.MYHtml5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -376,6 +385,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = MYHtml5/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -383,8 +394,9 @@
 					"-all_load",
 					"-ObjC",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.joyce.MYHtml5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tmts.MYHtml5;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

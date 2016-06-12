@@ -24,7 +24,7 @@
         <!--Item 2-->
         <scene sceneID="7bc-ij-COX">
             <objects>
-                <viewController id="1Wj-DU-B8K" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PrintViewController" id="1Wj-DU-B8K" customClass="PrintViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Qpl-fZ-mz5"/>
                         <viewControllerLayoutGuide type="bottom" id="FlC-wR-uvs"/>
@@ -33,21 +33,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pxa-Uf-Sdw">
-                                <rect key="frame" x="540" y="74" width="52" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W2p-mn-qiZ">
+                                <rect key="frame" x="0.0" y="451" width="600" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5A-tD-pSU">
+                                        <rect key="frame" x="500" y="2" width="80" height="36"/>
+                                        <color key="backgroundColor" red="0.25160572035615542" green="0.68171897285966154" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="kHl-jh-uMJ"/>
+                                        </constraints>
+                                        <state key="normal" title="打印">
+                                            <color key="titleColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="printClick:" destination="1Wj-DU-B8K" eventType="touchUpInside" id="pFO-5C-63u"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.56436396570000003" blue="0.64894807470000004" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="IJF-X2-Bb2"/>
-                                    <constraint firstAttribute="height" constant="30" id="iGT-rD-9Tc"/>
+                                    <constraint firstAttribute="trailing" secondItem="B5A-tD-pSU" secondAttribute="trailing" constant="20" id="DZx-hW-h71"/>
+                                    <constraint firstAttribute="height" constant="40" id="FhE-dE-ANd"/>
+                                    <constraint firstItem="B5A-tD-pSU" firstAttribute="top" secondItem="W2p-mn-qiZ" secondAttribute="top" constant="2" id="a1I-hU-asq"/>
+                                    <constraint firstAttribute="bottom" secondItem="B5A-tD-pSU" secondAttribute="bottom" constant="2" id="abL-Du-v4Y"/>
                                 </constraints>
-                            </switch>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMs-2R-Zha">
+                                <rect key="frame" x="0.0" y="64" width="600" height="387"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EJK-0K-nke">
+                                        <rect key="frame" x="20" y="50" width="560" height="317"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="EJK-0K-nke" secondAttribute="trailing" constant="20" id="8NA-JU-XrX"/>
+                                    <constraint firstAttribute="bottom" secondItem="EJK-0K-nke" secondAttribute="bottom" constant="20" id="HEb-OR-JiD"/>
+                                    <constraint firstItem="EJK-0K-nke" firstAttribute="leading" secondItem="LMs-2R-Zha" secondAttribute="leading" constant="20" id="KdR-Vd-zGK"/>
+                                    <constraint firstItem="EJK-0K-nke" firstAttribute="top" secondItem="LMs-2R-Zha" secondAttribute="top" constant="50" id="Tl7-9S-Xs6"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="pxa-Uf-Sdw" secondAttribute="trailing" constant="10" id="1gf-k9-fwH"/>
-                            <constraint firstItem="pxa-Uf-Sdw" firstAttribute="top" secondItem="Qpl-fZ-mz5" secondAttribute="bottom" constant="10" id="VAm-fv-hdN"/>
+                            <constraint firstItem="W2p-mn-qiZ" firstAttribute="top" secondItem="LMs-2R-Zha" secondAttribute="bottom" id="CTQ-aB-sDO"/>
+                            <constraint firstItem="LMs-2R-Zha" firstAttribute="top" secondItem="Qpl-fZ-mz5" secondAttribute="bottom" id="Ka1-ZF-ehk"/>
+                            <constraint firstAttribute="trailing" secondItem="W2p-mn-qiZ" secondAttribute="trailing" id="LhS-yR-RhC"/>
+                            <constraint firstAttribute="trailing" secondItem="LMs-2R-Zha" secondAttribute="trailing" id="MSt-Nn-EHN"/>
+                            <constraint firstItem="LMs-2R-Zha" firstAttribute="leading" secondItem="whT-Ll-3qS" secondAttribute="leading" id="OCc-jC-U1K"/>
+                            <constraint firstItem="FlC-wR-uvs" firstAttribute="top" secondItem="W2p-mn-qiZ" secondAttribute="bottom" constant="60" id="fXx-3k-nG5"/>
+                            <constraint firstItem="W2p-mn-qiZ" firstAttribute="leading" secondItem="whT-Ll-3qS" secondAttribute="leading" id="lsp-Ka-W5K"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="4xP-Mk-oBr"/>
+                    <connections>
+                        <outlet property="printBtn" destination="B5A-tD-pSU" id="1Da-MN-aPw"/>
+                        <outlet property="printView" destination="LMs-2R-Zha" id="boY-dZ-2fJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p8p-3w-WsE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
